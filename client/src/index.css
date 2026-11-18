@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b1020;
+  --color-panel: #111827;
+  --color-panel2: #0f172a;
+  --color-border: #1f2937;
+  --color-accent: #3b82f6;
+  --color-accent2: #06b6d4;
+  --color-accent3: #8b5cf6;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: #0b1020;
+  color: #e6edf3;
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+
+.glass { background: rgba(17,24,39,0.7); backdrop-filter: blur(8px); }
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); }
+  50% { box-shadow: 0 0 20px 4px rgba(59,130,246,0.25); }
+}
+.animate-glow { animation: pulse-glow 3s ease-in-out infinite; }

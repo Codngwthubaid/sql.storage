@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# builds
+client/dist/
+server/dist/
+
+# uploads
+server/uploads/
+
+# logs
+*.log
+npm-debug.log*
+
+# os
+.DS_Store
+Thumbs.db
+
+# task spec (contains credentials)
+task.txt
